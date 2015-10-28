@@ -1,0 +1,13 @@
+.app,
+.bap {
+  user-select: none;
+}
+
+.app {
+  background-color: green;
+  color: white;
+}
+
+.bap {
+  background-color: red;
+}
