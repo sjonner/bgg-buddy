@@ -1,38 +1,42 @@
 import React from 'react';
 import BggStore from '../stores/BggStore';
-import BggActions from '../actions/BggViewActions';
+import UserForm from '../components/UserForm';
+import UserInfo from '../components/UserInfo';
 
 import styles from './App.css';
 
 
-function getClicks() {
-    return {
-        clicks: BggStore.getClicks()
-    };
+function getCurrentUser() {
+  return { user: BggStore.getCurrentUser() };
 }
 
 export default React.createClass({
-    getInitialState() {
-        return getClicks();
-    },
+  getInitialState() {
+    return getCurrentUser();
+  },
 
-    componentWillMount() {
-        BggStore.addChangeListener(this._onChange);
-    },
+  componentWillMount() {
+  // ComponentDidMount() {
+    BggStore.addChangeListener(this._onChange);
+  },
 
-    componentWillUnmount() {
-        BggStore.removeChangeListener(this._onChange);
-    },
+  componentWillUnmount() {
+    BggStore.removeChangeListener(this._onChange);
+  },
 
-    _onChange() {
-        this.setState(getClicks());
-    },
+  _onChange() {
+    this.setState(getCurrentUser());
+  },
 
-    render() {
-        return <h1 className={this.state.clicks % 2 === 1 ? styles.app : styles.bap} onClick={this.handleClick}>Jo, clicked {this.state.clicks} times</h1>;
-    },
+  render() {
+    const user = this.state ? this.state.user : null;
+    const userInfo = user ? <UserInfo user={user} /> : null;
 
-    handleClick(event) {
-        BggActions.increaseClick();
-    },
+    return (
+      <div>
+        <UserForm user={user} />
+        {userInfo}
+      </div>
+    );
+  }
 });

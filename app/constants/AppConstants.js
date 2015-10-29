@@ -4,6 +4,6 @@ export default {
         SERVER_ACTION: 'SERVER_ACTION'
     },
     Actions: {
-        INCREASE_CLICK: 'INCREASE_CLICK'
+        GET_USER: 'GET_USER'
     }
 };
