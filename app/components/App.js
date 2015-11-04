@@ -2,8 +2,11 @@ import React from 'react';
 import BggStore from '../stores/BggStore';
 import UserForm from '../components/UserForm';
 import UserInfo from '../components/UserInfo';
+import injectTapEventPlugin from 'react-tap-event-plugin';
 
 import styles from './App.css';
+
+injectTapEventPlugin();
 
 
 function getCurrentUser() {
@@ -16,7 +19,6 @@ export default React.createClass({
   },
 
   componentWillMount() {
-  // ComponentDidMount() {
     BggStore.addChangeListener(this._onChange);
   },
 

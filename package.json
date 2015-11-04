@@ -29,8 +29,8 @@
     "bgg": "^0.2.2",
     "flux": "^2.1.1",
     "object-assign": "^4.0.1",
-    "react": "0.14.0-rc1 ",
-    "react-dom": "0.14.0-rc1",
+    "react": "^0.14.2",
+    "react-dom": "^0.14.2",
     "superagent": "^1.4.0"
   },
   "devDependencies": {
@@ -53,10 +53,12 @@
     "json-loader": "^0.5.3",
     "leveldown": "^1.4.2",
     "levelup": "^1.2.1",
+    "material-ui": "^0.13.1",
     "mocha": "^2.3.3",
     "mocha-jsdom": "^1.0.0",
     "postcss-loader": "^0.6.0",
     "react-addons-test-utils": "0.14.0-rc1",
+    "react-tap-event-plugin": "^0.2.1",
     "react-transform-hmr": "^1.0.0",
     "rimraf": "^2.4.3",
     "sinon": "^1.16.1",
