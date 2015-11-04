@@ -1,23 +1,23 @@
 {
-  "name": "webpack-express-boilerplate",
-  "version": "0.1.0",
-  "description": "A boilerplate for running a Webpack workflow in Node express",
+  "name": "bgg-buddy",
+  "version": "0.0.2",
+  "description": "A small app to check and manage your bgg collection.",
   "main": "server.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/christianalfoni/webpack-express-boilerplate.git"
+    "url": "https://github.com/sjonner/bgg-buddy.git"
   },
   "keywords": [
     "express",
     "webpack",
     "node"
   ],
-  "author": "Christian Alfoni",
+  "author": "John van Keulen",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/christianalfoni/webpack-express-boilerplate/issues"
+    "url": "https://github.com/sjonner/bgg-buddy/issues"
   },
-  "homepage": "https://github.com/christianalfoni/webpack-express-boilerplate",
+  "homepage": "https://github.com/sjonner/bgg-buddy",
   "scripts": {
     "test": "",
     "start": "babel-node server",
